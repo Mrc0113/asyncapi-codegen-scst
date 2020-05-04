@@ -1,51 +1,16 @@
-# template_repo README
+# asyncapi-codegen-scst
 
-## What does this demonstrate?
-Please specify what is this demo about ...
+## Overview
+This repo contains code artifacts that were used in my AsyncAPI Code Generation Blog + Video. 
 
-### Cloud Services Used
-List of cloud services uses in this demo if any ...
+* [Blog Link](https://solace.com/blog/asyncapi-codegen-microservices-using-spring-cloud-stream)
+* [Video Link](https://www.youtube.com/watch?v=QEDL6AqsaJc)
 
-  
-### Solace PubSub+ features used
-List of PubSub+ features used ...
-
-**Try the live demo in action here:
-http://london.solace.com/cloud-analytics/machine-learning.html**
-
-### Other Useful Links
-List of links to useful resources ...
-
-
-## Contents
-
-What does this repostiory contain ...
-
-
-## Checking out
-
-To check out the project, clone this GitHub repository:
-
-```
-git clone https://github.com/solacese/github-demo
-cd <github-demo>
-```
-
-## Running the Demo
-
-To run the demo open:
-
-```
-commands to run the demo go here ...
-```
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Authors
-
-See the list of [contributors](https://github.com/solacese/<github-repo>/graphs/contributors) who participated in this project.
+## Artifacts
+* Acme_Rideshare_EP_Export.json: This is my Solace Event Portal Application Domain Export
+* ExpenseIntegration.yaml: This is the AsyncAPI document I exported from the Event Portal and used for Code Generation
+* ExpenseIntegration/: This directory is what was generated from from the AsyncAPI Code Generator 
+* AsyncAPI Code Gen Command: `ag -force-write -o ExpenseIntegration -p binder=solace -p actuator=true -p artifactId=ExpenseIntegration -p groupId=acme.rideshare -p javaPackage=acme.rideshare.expense -p host=localhost:55555 -p username=default -p password=default -p msgVpn=default ExpenseIntegration.yaml https://github.com/asyncapi/java-spring-cloud-stream-template.git`
 
 ## License
 
@@ -55,8 +20,5 @@ This project is licensed under the Apache License, Version 2.0. - See the [LICEN
 
 For more information try these resources:
 
-- The Solace Developer Portal website at: http://dev.solace.com
-- Get a better understanding of [Solace technology](http://dev.solace.com/tech/).
-- Check out the [Solace blog](http://dev.solace.com/blog/) for other interesting discussions around Solace technology
-- Ask the [Solace community.](http://dev.solace.com/community/)
-
+- The Solace Developer Portal website at: https://solace.dev
+- Ask the [Solace Community](https://solace.community)

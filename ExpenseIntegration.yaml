@@ -1,0 +1,115 @@
+components:
+  schemas:
+    RideReceipt:
+      $schema: 'http://json-schema.org/draft-07/schema#'
+      description: >-
+        This Schema conforms to the format of a customer receipt and should only
+        be used when providing receipts to end customers. 
+      type: object
+      title: The Root Schema
+      definitions: {}
+      required:
+        - request_id
+        - subtotal
+        - total_charged
+        - total_owed
+        - total_fare
+        - currency_code
+        - duration
+        - distance
+        - distance_label
+      properties:
+        total_owed:
+          default: ''
+          examples:
+            - $5.92
+          pattern: ^(.*)$
+          type: string
+          title: The Total_fare Schema
+          $id: '#/properties/total_owed'
+        duration:
+          default: ''
+          examples:
+            - '00:11:35'
+          pattern: ^(.*)$
+          type: string
+          title: The Duration Schema
+          $id: '#/properties/duration'
+        total_charged:
+          default: ''
+          examples:
+            - $5.92
+          pattern: ^(.*)$
+          type: string
+          title: The Total_charged Schema
+          $id: '#/properties/total_charged'
+        distance:
+          default: ''
+          examples:
+            - '1.49'
+          pattern: ^(.*)$
+          type: string
+          title: The Distance Schema
+          $id: '#/properties/distance'
+        distance_label:
+          default: ''
+          examples:
+            - miles
+          pattern: ^(.*)$
+          type: string
+          title: The Distance_label Schema
+          $id: '#/properties/distance_label'
+        subtotal:
+          default: ''
+          examples:
+            - $5.92
+          pattern: ^(.*)$
+          type: string
+          title: The Subtotal Schema
+          $id: '#/properties/subtotal'
+        total_fare:
+          default: ''
+          examples:
+            - $5.92
+          pattern: ^(.*)$
+          type: string
+          title: The Total_fare Schema
+          $id: '#/properties/total_fare'
+        request_id:
+          default: ''
+          examples:
+            - b5512127-a134-4bf4-b1ba-fe9f48f56d9d
+          pattern: ^(.*)$
+          type: string
+          title: The Request_id Schema
+          $id: '#/properties/request_id'
+        currency_code:
+          default: ''
+          examples:
+            - USD
+          pattern: ^(.*)$
+          type: string
+          title: The Currency_code Schema
+          $id: '#/properties/currency_code'
+      $id: 'http://example.com/root.json'
+  messages:
+    CustomerReceiptGenerated:
+      payload:
+        $ref: '#/components/schemas/RideReceipt'
+      description: >-
+        This is the event which contains a customers receipt information once
+        payment has gone though
+      schemaFormat: application/vnd.aai.asyncapi+json;version=2.0.0
+      contentType: application/json
+channels:
+  acme/rideshare/billing/receipt/created/0.0.1:
+    subscribe:
+      message:
+        $ref: '#/components/messages/CustomerReceiptGenerated'
+asyncapi: 2.0.0
+info:
+  description: >-
+    This microservice captures receipts and sends them to supported expense
+    reporting systems
+  title: ExpenseIntegration
+  version: 0.0.1

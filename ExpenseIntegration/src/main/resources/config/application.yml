@@ -1,0 +1,27 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: acmeRideshareBillingReceiptCreated001Consumer
+      bindings:
+        acmeRideshareBillingReceiptCreated001Consumer-in-0:
+          destination: acme/rideshare/billing/receipt/created/0.0.1
+solace:
+  java:
+    host: 'localhost:55555'
+    msgVpn: default
+    clientUsername: default
+    clientPassword: default
+logging:
+  level:
+    root: info
+    org:
+      springframework: info
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+

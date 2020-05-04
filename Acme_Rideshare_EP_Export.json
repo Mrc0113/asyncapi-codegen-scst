@@ -1,0 +1,415 @@
+{
+  "createdTime": 1584037496627,
+  "updatedTime": 1584037496627,
+  "createdBy": "admin",
+  "changedBy": "admin",
+  "id": "2m66ibk9r",
+  "name": "Acme Rideshare",
+  "topicDomain": "acme/rideshare",
+  "description": "",
+  "defaultDomain": false,
+  "enforceUniqueTopicNames": true,
+  "type": "applicationDomain",
+  "events": [
+    {
+      "createdTime": 1584037496859,
+      "updatedTime": 1586552170690,
+      "createdBy": "admin",
+      "changedBy": "155penx6vkk3",
+      "id": "2m66iblh3",
+      "name": "CustomerReceiptGenerated",
+      "version": "0.0.1",
+      "shared": false,
+      "topicName": "acme/rideshare/billing/receipt/created/0.0.1",
+      "description": "This is the event which contains a customers receipt information once payment has gone though",
+      "schemaId": "2m66iblcn",
+      "applicationDomainId": "2m66ibk9r",
+      "producedApplicationIds": [
+        "2m66iblq9"
+      ],
+      "consumedApplicationIds": [
+        "2m66iblrd",
+        "2xw5tf17dce3"
+      ],
+      "revisionNumber": 3,
+      "type": "event"
+    },
+    {
+      "createdTime": 1584037496859,
+      "updatedTime": 1584037496859,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblhd",
+      "name": "DriverFundsDeposited",
+      "version": "0.0.1",
+      "shared": false,
+      "topicName": "acme/rideshare/driver/funds/deposited/1.0.1/{driver_id}/{trip_id}/{payment_id}",
+      "description": "This event is triggered after billing has successfully deposited money into a drivers account",
+      "schemaId": "2m66iblbt",
+      "applicationDomainId": "2m66ibk9r",
+      "producedApplicationIds": [
+        "2m66iblq9"
+      ],
+      "consumedApplicationIds": [
+        "2m66iblqj"
+      ],
+      "revisionNumber": 1,
+      "type": "event"
+    },
+    {
+      "createdTime": 1584037496859,
+      "updatedTime": 1584037496859,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblhn",
+      "name": "DriverRideAccepted",
+      "version": "0.0.1",
+      "shared": false,
+      "topicName": "acme/rideshare/driver/accepted/2.0.5/{location}/json/{customer_id}/{request_id}/{driver}",
+      "description": "This event is generated when the driver has accepted the ride and will be on his way to pick up the passenger",
+      "schemaId": "2m66iblc3",
+      "applicationDomainId": "2m66ibk9r",
+      "producedApplicationIds": [
+        "2m66iblqj"
+      ],
+      "consumedApplicationIds": [
+        "2m66iblqt"
+      ],
+      "revisionNumber": 1,
+      "type": "event"
+    },
+    {
+      "createdTime": 1584037496859,
+      "updatedTime": 1584037496859,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblhx",
+      "name": "DriverRideRequested",
+      "version": "0.0.1",
+      "shared": false,
+      "topicName": "acme/rideshare/driver/requested/3.8.1/{start_longitude}/{start_longitude}/json/{customer_id}/{request_id}",
+      "description": "This is the event triggered to active drivers that are within a geospatial proximity to the passenger ",
+      "schemaId": "2m66iblcx",
+      "applicationDomainId": "2m66ibk9r",
+      "producedApplicationIds": [
+        "2m66iblqt"
+      ],
+      "consumedApplicationIds": [
+        "2m66iblqj"
+      ],
+      "revisionNumber": 1,
+      "type": "event"
+    },
+    {
+      "createdTime": 1584037496859,
+      "updatedTime": 1584037496859,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66ibli7",
+      "name": "DriverStatusUpdated",
+      "version": "0.0.1",
+      "shared": false,
+      "topicName": "acme/rideshare/driver/status/updated/1.0.2/{driver_id}/{activation_status}",
+      "description": "When a driver status changes, this event is generated to notify up status changes. ",
+      "schemaId": "2m66iblcd",
+      "applicationDomainId": "2m66ibk9r",
+      "producedApplicationIds": [
+        "2m66iblqj"
+      ],
+      "consumedApplicationIds": [
+        "2m66iblqt"
+      ],
+      "revisionNumber": 1,
+      "type": "event"
+    },
+    {
+      "createdTime": 1584037496859,
+      "updatedTime": 1584037496859,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblih",
+      "name": "RideAccepted",
+      "version": "0.0.1",
+      "shared": false,
+      "topicName": "acme/rideshare/ride/accepted/2.0.5/{location}/json/{customer_id}/{request_id}/{driver}",
+      "description": "This is the event which is fired when a ride has been accepted and committed to by a driver. ",
+      "schemaId": "2m66iblc3",
+      "applicationDomainId": "2m66ibk9r",
+      "producedApplicationIds": [
+        "2m66iblqt"
+      ],
+      "consumedApplicationIds": [
+        "2m66iblrd"
+      ],
+      "revisionNumber": 1,
+      "type": "event"
+    },
+    {
+      "createdTime": 1584037496859,
+      "updatedTime": 1584037496859,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblir",
+      "name": "RideRequested",
+      "version": "0.0.1",
+      "shared": false,
+      "topicName": "acme/rideshare/ride/requested/2.0.1/{start_longitude}/{start_longitude}/json/{customer_id}/{request_id}",
+      "description": "This is the event that is fired when a customer has confirmed they want a ride. ",
+      "schemaId": "2m66iblcx",
+      "applicationDomainId": "2m66ibk9r",
+      "producedApplicationIds": [
+        "2m66iblrd"
+      ],
+      "consumedApplicationIds": [
+        "2m66iblqt"
+      ],
+      "revisionNumber": 1,
+      "type": "event"
+    },
+    {
+      "createdTime": 1584037496859,
+      "updatedTime": 1584037496859,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblj1",
+      "name": "TripUpdated",
+      "version": "0.0.1",
+      "shared": true,
+      "topicName": "acme/rideshare/trip/updated/7.0.2/json/{driver_id}/{trip_id}/{status}",
+      "description": "This is the event which is fired periodically when a driver is on an active trip",
+      "schemaId": "2m66ibld7",
+      "applicationDomainId": "2m66ibk9r",
+      "producedApplicationIds": [
+        "2m66iblqj"
+      ],
+      "consumedApplicationIds": [
+        "2m66iblq9",
+        "2m66iblqt"
+      ],
+      "revisionNumber": 1,
+      "type": "event"
+    }
+  ],
+  "schemas": [
+    {
+      "createdTime": 1584037496836,
+      "updatedTime": 1584037496836,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblbt",
+      "name": "DriverPayment",
+      "version": "0.0.1",
+      "shared": false,
+      "description": "This Schema represents the data needed to inform drivers about being paid for a given ride and the payment breakdown",
+      "contentType": "JSON",
+      "content": "{\"definitions\":{},\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$id\":\"http://example.com/root.json\",\"type\":\"object\",\"title\":\"The Root Schema\",\"required\":[\"count\",\"limit\",\"payments\",\"offset\"],\"properties\":{\"count\":{\"$id\":\"#/properties/count\",\"type\":\"integer\",\"title\":\"The Count Schema\",\"default\":0,\"examples\":[1200]},\"limit\":{\"$id\":\"#/properties/limit\",\"type\":\"integer\",\"title\":\"The Limit Schema\",\"default\":0,\"examples\":[1]},\"payments\":{\"$id\":\"#/properties/payments\",\"type\":\"array\",\"title\":\"The Payments Schema\",\"items\":{\"$id\":\"#/properties/payments/items\",\"type\":\"object\",\"title\":\"The Items Schema\",\"required\":[\"payment_id\",\"category\",\"event_time\",\"trip_id\",\"cash_collected\",\"amount\",\"driver_id\",\"breakdown\",\"rider_fees\",\"partner_id\",\"currency_code\"],\"properties\":{\"payment_id\":{\"$id\":\"#/properties/payments/items/properties/payment_id\",\"type\":\"string\",\"title\":\"The Payment_id Schema\",\"default\":\"\",\"examples\":[\"5cb8304c-f3f0-4a46-b6e3-b55e020750d7\"],\"pattern\":\"^(.*)$\"},\"category\":{\"$id\":\"#/properties/payments/items/properties/category\",\"type\":\"string\",\"title\":\"The Category Schema\",\"default\":\"\",\"examples\":[\"fare\"],\"pattern\":\"^(.*)$\"},\"event_time\":{\"$id\":\"#/properties/payments/items/properties/event_time\",\"type\":\"integer\",\"title\":\"The Event_time Schema\",\"default\":0,\"examples\":[1502842757]},\"trip_id\":{\"$id\":\"#/properties/payments/items/properties/trip_id\",\"type\":\"string\",\"title\":\"The Trip_id Schema\",\"default\":\"\",\"examples\":[\"5cb8304c-f3f0-4a46-b6e3-b55e020750d7\"],\"pattern\":\"^(.*)$\"},\"cash_collected\":{\"$id\":\"#/properties/payments/items/properties/cash_collected\",\"type\":\"integer\",\"title\":\"The Cash_collected Schema\",\"default\":0,\"examples\":[0]},\"amount\":{\"$id\":\"#/properties/payments/items/properties/amount\",\"type\":\"number\",\"title\":\"The Amount Schema\",\"default\":0,\"examples\":[4.12]},\"driver_id\":{\"$id\":\"#/properties/payments/items/properties/driver_id\",\"type\":\"string\",\"title\":\"The Driver_id Schema\",\"default\":\"\",\"examples\":[\"8LvWuRAq2511gmr8EMkovekFNa2848lyMaQevIto-aXmnK9oKNRtfTxYLgPq9OSt8EzAu5pDB7XiaQIrcp-zXgOA5EyK4h00U6D1o7aZpXIQah--U77Eh7LEBiksj2rahB==\"],\"pattern\":\"^(.*)$\"},\"breakdown\":{\"$id\":\"#/properties/payments/items/properties/breakdown\",\"type\":\"object\",\"title\":\"The Breakdown Schema\",\"required\":[\"other\",\"toll\",\"service_fee\"],\"properties\":{\"other\":{\"$id\":\"#/properties/payments/items/properties/breakdown/properties/other\",\"type\":\"number\",\"title\":\"The Other Schema\",\"default\":0,\"examples\":[4.16]},\"toll\":{\"$id\":\"#/properties/payments/items/properties/breakdown/properties/toll\",\"type\":\"integer\",\"title\":\"The Toll Schema\",\"default\":0,\"examples\":[1]},\"service_fee\":{\"$id\":\"#/properties/payments/items/properties/breakdown/properties/service_fee\",\"type\":\"number\",\"title\":\"The Service_fee Schema\",\"default\":0,\"examples\":[-1.04]}}},\"rider_fees\":{\"$id\":\"#/properties/payments/items/properties/rider_fees\",\"type\":\"object\",\"title\":\"The Rider_fees Schema\",\"required\":[\"split_fare\"],\"properties\":{\"split_fare\":{\"$id\":\"#/properties/payments/items/properties/rider_fees/properties/split_fare\",\"type\":\"number\",\"title\":\"The Split_fare Schema\",\"default\":0,\"examples\":[0.5]}}},\"partner_id\":{\"$id\":\"#/properties/payments/items/properties/partner_id\",\"type\":\"string\",\"title\":\"The Partner_id Schema\",\"default\":\"\",\"examples\":[\"8LvWuRAq2511gmr8EMkovekFNa2848lyMaQevIto-aXmnK9oKNRtfTxYLgPq9OSt8EzAu5pDB7XiaQIrcp-zXgOA5EyK4h00U6D1o7aZpXIQah--U77Eh7LEBiksj2rahB==\"],\"pattern\":\"^(.*)$\"},\"currency_code\":{\"$id\":\"#/properties/payments/items/properties/currency_code\",\"type\":\"string\",\"title\":\"The Currency_code Schema\",\"default\":\"\",\"examples\":[\"USD\"],\"pattern\":\"^(.*)$\"}}}},\"offset\":{\"$id\":\"#/properties/offset\",\"type\":\"integer\",\"title\":\"The Offset Schema\",\"default\":0,\"examples\":[0]}}}",
+      "eventIds": [
+        "2m66iblhd"
+      ],
+      "applicationDomainId": "2m66ibk9r",
+      "revisionNumber": 1,
+      "type": "schema"
+    },
+    {
+      "createdTime": 1584037496836,
+      "updatedTime": 1584037496836,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblc3",
+      "name": "DriverRideAccept",
+      "version": "0.0.1",
+      "shared": false,
+      "description": "Data format that represents the information required for a driver to accept a ride. ",
+      "contentType": "JSON",
+      "content": "{\"definitions\":{},\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$id\":\"http://example.com/root.json\",\"type\":\"object\",\"title\":\"The Root Schema\",\"required\":[\"request_id\",\"product_id\",\"status\",\"vehicle\",\"driver\",\"location\",\"eta\",\"surge_multiplier\"],\"properties\":{\"request_id\":{\"$id\":\"#/properties/request_id\",\"type\":\"string\",\"title\":\"The Request_id Schema\",\"default\":\"\",\"examples\":[\"852b8fdd-4369-4659-9628-e122662ad257\"],\"pattern\":\"^(.*)$\"},\"product_id\":{\"$id\":\"#/properties/product_id\",\"type\":\"string\",\"title\":\"The Product_id Schema\",\"default\":\"\",\"examples\":[\"a1111c8c-c720-46c3-8534-2fcdd730040d\"],\"pattern\":\"^(.*)$\"},\"status\":{\"$id\":\"#/properties/status\",\"type\":\"string\",\"title\":\"The Status Schema\",\"default\":\"\",\"examples\":[\"processing\"],\"pattern\":\"^(.*)$\"},\"vehicle\":{\"$id\":\"#/properties/vehicle\",\"type\":\"null\",\"title\":\"The Vehicle Schema\",\"default\":null,\"examples\":[null]},\"driver\":{\"$id\":\"#/properties/driver\",\"type\":\"null\",\"title\":\"The Driver Schema\",\"default\":null,\"examples\":[null]},\"location\":{\"$id\":\"#/properties/location\",\"type\":\"null\",\"title\":\"The Location Schema\",\"default\":null,\"examples\":[null]},\"eta\":{\"$id\":\"#/properties/eta\",\"type\":\"integer\",\"title\":\"The Eta Schema\",\"default\":0,\"examples\":[5]},\"surge_multiplier\":{\"$id\":\"#/properties/surge_multiplier\",\"type\":\"null\",\"title\":\"The Surge_multiplier Schema\",\"default\":null,\"examples\":[null]}}}",
+      "eventIds": [
+        "2m66iblhn",
+        "2m66iblih"
+      ],
+      "applicationDomainId": "2m66ibk9r",
+      "revisionNumber": 1,
+      "type": "schema"
+    },
+    {
+      "createdTime": 1584037496836,
+      "updatedTime": 1584037496836,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblcd",
+      "name": "DriverStatus",
+      "version": "0.0.1",
+      "shared": false,
+      "description": "Schema represents the data format that the driver apps should be sending periodically that represent the \"state\" of the driver. ",
+      "contentType": "JSON",
+      "content": "{\"definitions\":{},\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$id\":\"http://example.com/root.json\",\"type\":\"object\",\"title\":\"The Root Schema\",\"required\":[\"driver_id\",\"first_name\",\"last_name\",\"email\",\"phone_number\",\"picture\",\"promo_code\",\"rating\",\"activation_status\"],\"properties\":{\"driver_id\":{\"$id\":\"#/properties/driver_id\",\"type\":\"string\",\"title\":\"The Driver_id Schema\",\"default\":\"\",\"examples\":[\"8LvWuRAq2511gmr8EMkovekFNa2848lyMaQevIto-aXmnK9oKNRtfTxYLgPq9OSt8EzAu5pDB7XiaQIrcp-zXgOA5EyK4h00U6D1o7aZpXIQah--U77Eh7LEBiksj2rahB==\"],\"pattern\":\"^(.*)$\"},\"first_name\":{\"$id\":\"#/properties/first_name\",\"type\":\"string\",\"title\":\"The First_name Schema\",\"default\":\"\",\"examples\":[\"Uber\"],\"pattern\":\"^(.*)$\"},\"last_name\":{\"$id\":\"#/properties/last_name\",\"type\":\"string\",\"title\":\"The Last_name Schema\",\"default\":\"\",\"examples\":[\"Tester\"],\"pattern\":\"^(.*)$\"},\"email\":{\"$id\":\"#/properties/email\",\"type\":\"string\",\"title\":\"The Email Schema\",\"default\":\"\",\"examples\":[\"uber.developer+tester@example.com\"],\"pattern\":\"^(.*)$\"},\"phone_number\":{\"$id\":\"#/properties/phone_number\",\"type\":\"string\",\"title\":\"The Phone_number Schema\",\"default\":\"\",\"examples\":[\"+14155550000\"],\"pattern\":\"^(.*)$\"},\"picture\":{\"$id\":\"#/properties/picture\",\"type\":\"string\",\"title\":\"The Picture Schema\",\"default\":\"\",\"examples\":[\"https://d1w2poirtb3as9.cloudfront.net/16ce502f4767f17b120e.png\"],\"pattern\":\"^(.*)$\"},\"promo_code\":{\"$id\":\"#/properties/promo_code\",\"type\":\"string\",\"title\":\"The Promo_code Schema\",\"default\":\"\",\"examples\":[\"ubert4544ue\"],\"pattern\":\"^(.*)$\"},\"rating\":{\"$id\":\"#/properties/rating\",\"type\":\"integer\",\"title\":\"The Rating Schema\",\"default\":0,\"examples\":[5]},\"activation_status\":{\"$id\":\"#/properties/activation_status\",\"type\":\"string\",\"title\":\"The Activation_status Schema\",\"default\":\"\",\"examples\":[\"active\"],\"pattern\":\"^(.*)$\"}}}",
+      "eventIds": [
+        "2m66ibli7"
+      ],
+      "applicationDomainId": "2m66ibk9r",
+      "revisionNumber": 1,
+      "type": "schema"
+    },
+    {
+      "createdTime": 1584037496836,
+      "updatedTime": 1586550758277,
+      "createdBy": "admin",
+      "changedBy": "155penx6vkk3",
+      "id": "2m66iblcn",
+      "name": "RideReceipt",
+      "version": "0.0.1",
+      "shared": false,
+      "description": "This Schema conforms to the format of a customer receipt and should only be used when providing receipts to end customers. ",
+      "contentType": "JSON",
+      "content": "{\n  \"definitions\": {},\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"$id\": \"http://example.com/root.json\",\n  \"type\": \"object\",\n  \"title\": \"The Root Schema\",\n  \"required\": [\n    \"request_id\",\n    \"subtotal\",\n    \"total_charged\",\n    \"total_owed\",\n    \"total_fare\",\n    \"currency_code\",\n    \"duration\",\n    \"distance\",\n    \"distance_label\"\n  ],\n  \"properties\": {\n    \"request_id\": {\n      \"$id\": \"#/properties/request_id\",\n      \"type\": \"string\",\n      \"title\": \"The Request_id Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"b5512127-a134-4bf4-b1ba-fe9f48f56d9d\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"subtotal\": {\n      \"$id\": \"#/properties/subtotal\",\n      \"type\": \"string\",\n      \"title\": \"The Subtotal Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"$5.92\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"total_charged\": {\n      \"$id\": \"#/properties/total_charged\",\n      \"type\": \"string\",\n      \"title\": \"The Total_charged Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"$5.92\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"total_owed\": {\n      \"$id\": \"#/properties/total_owed\",\n      \"type\": \"string\",\n      \"title\": \"The Total_fare Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"$5.92\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"total_fare\": {\n      \"$id\": \"#/properties/total_fare\",\n      \"type\": \"string\",\n      \"title\": \"The Total_fare Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"$5.92\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"currency_code\": {\n      \"$id\": \"#/properties/currency_code\",\n      \"type\": \"string\",\n      \"title\": \"The Currency_code Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"USD\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"duration\": {\n      \"$id\": \"#/properties/duration\",\n      \"type\": \"string\",\n      \"title\": \"The Duration Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"00:11:35\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"distance\": {\n      \"$id\": \"#/properties/distance\",\n      \"type\": \"string\",\n      \"title\": \"The Distance Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"1.49\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"distance_label\": {\n      \"$id\": \"#/properties/distance_label\",\n      \"type\": \"string\",\n      \"title\": \"The Distance_label Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"miles\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    }\n  }\n}",
+      "eventIds": [
+        "2m66iblh3"
+      ],
+      "applicationDomainId": "2m66ibk9r",
+      "revisionNumber": 3,
+      "type": "schema"
+    },
+    {
+      "createdTime": 1584037496836,
+      "updatedTime": 1584037496836,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblcx",
+      "name": "RideRequest",
+      "version": "0.0.1",
+      "shared": false,
+      "description": "The Ride Request schema allows a user to define the ride that is to be requested. ",
+      "contentType": "JSON",
+      "content": "{\"definitions\":{},\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$id\":\"http://example.com/root.json\",\"type\":\"object\",\"title\":\"The Root Schema\",\"required\":[\"fare_id\",\"product_id\",\"start_latitude\",\"start_longitude\",\"end_latitude\",\"end_longitude\"],\"properties\":{\"customer_id\":{\"$id\":\"#/properties/customer_id\",\"type\":\"string\",\"title\":\"The customer_id Schema\",\"default\":\"\",\"examples\":[\"d30e732b8bba22c9cdc10513ee86380087cb4a6f89e37ad21ba2a39f3a1ba960\"],\"pattern\":\"^(.*)$\"},\"request_id\":{\"$id\":\"#/properties/request_id\",\"type\":\"string\",\"title\":\"The request_id Schema\",\"default\":\"\",\"examples\":[\"d30e732b8bba22c9cdc10513ee86380087cb4a6f89e37ad21ba2a39f3a1ba960\"],\"pattern\":\"^(.*)$\"},\"fare_id\":{\"$id\":\"#/properties/fare_id\",\"type\":\"string\",\"title\":\"The Fare_id Schema\",\"default\":\"\",\"examples\":[\"d30e732b8bba22c9cdc10513ee86380087cb4a6f89e37ad21ba2a39f3a1ba960\"],\"pattern\":\"^(.*)$\"},\"product_id\":{\"$id\":\"#/properties/product_id\",\"type\":\"string\",\"title\":\"The Product_id Schema\",\"default\":\"\",\"examples\":[\"a1111c8c-c720-46c3-8534-2fcdd730040d\"],\"pattern\":\"^(.*)$\"},\"start_latitude\":{\"$id\":\"#/properties/start_latitude\",\"type\":\"number\",\"title\":\"The Start_latitude Schema\",\"default\":0,\"examples\":[37.761492]},\"start_longitude\":{\"$id\":\"#/properties/start_longitude\",\"type\":\"number\",\"title\":\"The Start_longitude Schema\",\"default\":0,\"examples\":[-122.423941]},\"end_latitude\":{\"$id\":\"#/properties/end_latitude\",\"type\":\"number\",\"title\":\"The End_latitude Schema\",\"default\":0,\"examples\":[37.775393]},\"end_longitude\":{\"$id\":\"#/properties/end_longitude\",\"type\":\"number\",\"title\":\"The End_longitude Schema\",\"default\":0,\"examples\":[-122.417546]}}}",
+      "eventIds": [
+        "2m66iblhx",
+        "2m66iblir"
+      ],
+      "applicationDomainId": "2m66ibk9r",
+      "revisionNumber": 1,
+      "type": "schema"
+    },
+    {
+      "createdTime": 1584037496836,
+      "updatedTime": 1584037496836,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66ibld7",
+      "name": "Trip",
+      "version": "0.0.1",
+      "shared": true,
+      "description": "Data Schema represents the information of a trip status",
+      "contentType": "JSON",
+      "content": "{\"definitions\":{},\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$id\":\"http://example.com/root.json\",\"type\":\"object\",\"title\":\"The Root Schema\",\"required\":[\"fare\",\"dropoff\",\"vehicle_id\",\"distance\",\"start_city\",\"status_changes\",\"surge_multiplier\",\"pickup\",\"driver_id\",\"status\",\"duration\",\"trip_id\",\"currency_code\"],\"properties\":{\"fare\":{\"$id\":\"#/properties/fare\",\"type\":\"number\",\"title\":\"The Fare Schema\",\"default\":0,\"examples\":[6.2]},\"dropoff\":{\"$id\":\"#/properties/dropoff\",\"type\":\"object\",\"title\":\"The Dropoff Schema\",\"required\":[\"timestamp\"],\"properties\":{\"timestamp\":{\"$id\":\"#/properties/dropoff/properties/timestamp\",\"type\":\"integer\",\"title\":\"The Timestamp Schema\",\"default\":0,\"examples\":[1502844378]}}},\"vehicle_id\":{\"$id\":\"#/properties/vehicle_id\",\"type\":\"string\",\"title\":\"The Vehicle_id Schema\",\"default\":\"\",\"examples\":[\"0082b54a-6a5e-4f6b-b999-b0649f286381\"],\"pattern\":\"^(.*)$\"},\"distance\":{\"$id\":\"#/properties/distance\",\"type\":\"number\",\"title\":\"The Distance Schema\",\"default\":0,\"examples\":[0.37]},\"start_city\":{\"$id\":\"#/properties/start_city\",\"type\":\"object\",\"title\":\"The Start_city Schema\",\"required\":[\"latitude\",\"display_name\",\"longitude\"],\"properties\":{\"latitude\":{\"$id\":\"#/properties/start_city/properties/latitude\",\"type\":\"number\",\"title\":\"The Latitude Schema\",\"default\":0,\"examples\":[38.3498]},\"display_name\":{\"$id\":\"#/properties/start_city/properties/display_name\",\"type\":\"string\",\"title\":\"The Display_name Schema\",\"default\":\"\",\"examples\":[\"Charleston, WV\"],\"pattern\":\"^(.*)$\"},\"longitude\":{\"$id\":\"#/properties/start_city/properties/longitude\",\"type\":\"number\",\"title\":\"The Longitude Schema\",\"default\":0,\"examples\":[-81.6326]}}},\"status_changes\":{\"$id\":\"#/properties/status_changes\",\"type\":\"array\",\"title\":\"The Status_changes Schema\",\"items\":{\"$id\":\"#/properties/status_changes/items\",\"type\":\"object\",\"title\":\"The Items Schema\",\"required\":[\"status\",\"timestamp\"],\"properties\":{\"status\":{\"$id\":\"#/properties/status_changes/items/properties/status\",\"type\":\"string\",\"title\":\"The Status Schema\",\"default\":\"\",\"examples\":[\"accepted\"],\"pattern\":\"^(.*)$\"},\"timestamp\":{\"$id\":\"#/properties/status_changes/items/properties/timestamp\",\"type\":\"integer\",\"title\":\"The Timestamp Schema\",\"default\":0,\"examples\":[1502843899]}}}},\"surge_multiplier\":{\"$id\":\"#/properties/surge_multiplier\",\"type\":\"integer\",\"title\":\"The Surge_multiplier Schema\",\"default\":0,\"examples\":[1]},\"pickup\":{\"$id\":\"#/properties/pickup\",\"type\":\"object\",\"title\":\"The Pickup Schema\",\"required\":[\"timestamp\"],\"properties\":{\"timestamp\":{\"$id\":\"#/properties/pickup/properties/timestamp\",\"type\":\"integer\",\"title\":\"The Timestamp Schema\",\"default\":0,\"examples\":[1502843903]}}},\"driver_id\":{\"$id\":\"#/properties/driver_id\",\"type\":\"string\",\"title\":\"The Driver_id Schema\",\"default\":\"\",\"examples\":[\"8LvWuRAq2511gmr8EMkovekFNa2848lyMaQevIto-aXmnK9oKNRtfTxYLgPq9OSt8EzAu5pDB7XiaQIrcp-zXgOA5EyK4h00U6D1o7aZpXIQah--U77Eh7LEBiksj2rahB==\"],\"pattern\":\"^(.*)$\"},\"status\":{\"$id\":\"#/properties/status\",\"type\":\"string\",\"title\":\"The Status Schema\",\"default\":\"\",\"examples\":[\"completed\"],\"pattern\":\"^(.*)$\"},\"duration\":{\"$id\":\"#/properties/duration\",\"type\":\"integer\",\"title\":\"The Duration Schema\",\"default\":0,\"examples\":[475]},\"trip_id\":{\"$id\":\"#/properties/trip_id\",\"type\":\"string\",\"title\":\"The Trip_id Schema\",\"default\":\"\",\"examples\":[\"b5613b6a-fe74-4704-a637-50f8d51a8bb1\"],\"pattern\":\"^(.*)$\"},\"currency_code\":{\"$id\":\"#/properties/currency_code\",\"type\":\"string\",\"title\":\"The Currency_code Schema\",\"default\":\"\",\"examples\":[\"USD\"],\"pattern\":\"^(.*)$\"}}}",
+      "eventIds": [
+        "2m66iblj1"
+      ],
+      "applicationDomainId": "2m66ibk9r",
+      "revisionNumber": 1,
+      "type": "schema"
+    }
+  ],
+  "applications": [
+    {
+      "createdTime": 1584037496892,
+      "updatedTime": 1586811154398,
+      "createdBy": "admin",
+      "changedBy": "155penx6vkk3",
+      "id": "2m66iblq9",
+      "name": "Billing System",
+      "version": "0.0.1",
+      "description": "This app processes customer payments and also pays the drivers. ",
+      "applicationDomainId": "2m66ibk9r",
+      "producedEventIds": [
+        "2m66iblh3",
+        "2m66iblhd"
+      ],
+      "consumedEventIds": [
+        "2m66iblj1"
+      ],
+      "revisionNumber": 3,
+      "type": "application"
+    },
+    {
+      "createdTime": 1584037496892,
+      "updatedTime": 1584037496892,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblqj",
+      "name": "Driver App",
+      "version": "0.0.1",
+      "description": "This is the application that a driver uses to interact with the Acme Rideshare ecosystem. ",
+      "applicationDomainId": "2m66ibk9r",
+      "producedEventIds": [
+        "2m66iblhn",
+        "2m66ibli7",
+        "2m66iblj1"
+      ],
+      "consumedEventIds": [
+        "2m66iblhd",
+        "2m66iblhx"
+      ],
+      "revisionNumber": 1,
+      "type": "application"
+    },
+    {
+      "createdTime": 1584037496892,
+      "updatedTime": 1584037496892,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblqt",
+      "name": "Driver Management",
+      "version": "0.0.1",
+      "description": "This application controls which rides need to be fulfilled, which are in route, and completed",
+      "applicationDomainId": "2m66ibk9r",
+      "producedEventIds": [
+        "2m66iblhx",
+        "2m66iblih"
+      ],
+      "consumedEventIds": [
+        "2m66iblhn",
+        "2m66ibli7",
+        "2m66iblir",
+        "2m66iblj1"
+      ],
+      "revisionNumber": 1,
+      "type": "application"
+    },
+    {
+      "createdTime": 1587143359005,
+      "updatedTime": 1587143359005,
+      "createdBy": "155penx6vkk3",
+      "changedBy": "155penx6vkk3",
+      "id": "2xw5tf17dce3",
+      "name": "ExpenseIntegration",
+      "version": "0.0.1",
+      "description": "This microservice captures receipts and sends them to supported expense reporting systems",
+      "applicationDomainId": "2m66ibk9r",
+      "producedEventIds": [],
+      "consumedEventIds": [
+        "2m66iblh3"
+      ],
+      "revisionNumber": 1,
+      "type": "application"
+    },
+    {
+      "createdTime": 1584037496892,
+      "updatedTime": 1584037496892,
+      "createdBy": "admin",
+      "changedBy": "admin",
+      "id": "2m66iblrd",
+      "name": "Passenger App",
+      "version": "0.0.1",
+      "description": "This is the app that a user of acme rideshare uses in order to obtain rides from willing drivers. ",
+      "applicationDomainId": "2m66ibk9r",
+      "producedEventIds": [
+        "2m66iblir"
+      ],
+      "consumedEventIds": [
+        "2m66iblh3",
+        "2m66iblih"
+      ],
+      "revisionNumber": 1,
+      "type": "application"
+    }
+  ]
+}
